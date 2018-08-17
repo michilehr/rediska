@@ -1449,4 +1449,13 @@ class Rediska extends Rediska_Options
      */
     public function slaveOf($aliasOrConnection) { $args = func_get_args(); return $this->_executeCommand('slaveOf', $args); }
 
+    /**
+     * Get ip address and port of current master from sentinel
+     *
+     * @param $name
+     * @return array
+     * @throws Rediska_Connection_Exception
+     */
+    public function getMasterAddrByName($name = 'mymaster') { $args = func_get_args(); return $this->_executeCommand('getMasterAddrByName', $args); }
+
 }

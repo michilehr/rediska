@@ -934,4 +934,13 @@ class Rediska_Pipeline
      */
     public function slaveOf($aliasOrConnection) { $args = func_get_args(); return $this->_addCommand('slaveOf', $args); }
 
+    /**
+     * Get ip address and port of current master from sentinel
+     *
+     * @param $name
+     * @return Rediska_Pipeline
+     * @throws Rediska_Connection_Exception
+     */
+    public function getMasterAddrByName($name = 'mymaster') { $args = func_get_args(); return $this->_addCommand('getMasterAddrByName', $args); }
+
 }

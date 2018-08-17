@@ -119,7 +119,10 @@ class Rediska_Commands
         // Remote server control commands
         'info'    => 'Rediska_Command_Info',
         'ping'    => 'Rediska_Command_Ping',
-        'slaveof' => 'Rediska_Command_SlaveOf'
+        'slaveof' => 'Rediska_Command_SlaveOf',
+
+        // Sentinel commands
+        'getmasteraddrbyname' => 'Rediska_Command_GetMasterAddrByName'
     );
 
     /**
